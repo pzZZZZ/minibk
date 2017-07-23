@@ -18,14 +18,6 @@ router.get('/', function (req, res, next) {
                 var data = fs.readFileSync(info[0],'utf-8');
                 var content = fm(data)
                 objtitle.push(content.attributes)
-                //    let data = fs.readFileSync(info[0], 'utf8', function (err, data) {
-                // if (err) throw err
-                // var content = fm(data)
-                // objtitle.push(content.attributes)
-                // res.send(content.attributes.title + marked(content.body));
-                // res.send('ok');
-                // })
-
             }
             if (i + 1 == l) {
                 //返回数据
