@@ -17,6 +17,7 @@
   "devDependencies": {
     "front-matter": "^2.1.2",
     "marked": "^0.3.6",
-    "ndir": "^0.1.5"
+    "ndir": "^0.1.5",
+    "walk": "^2.3.9"
   }
 }

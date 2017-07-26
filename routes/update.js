@@ -6,6 +6,8 @@ var ndir = require('ndir');
 var router = express.Router();
 let objtitle = [];
 
+   
+
 //更新文章title
 /* GET users listing. */
 router.get('/', function (req, res, next) {
@@ -32,5 +34,8 @@ router.get('/', function (req, res, next) {
     });
 
 });
+
+
+
 
 module.exports = router;
