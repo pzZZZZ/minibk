@@ -1,3 +1,10 @@
+/*
+ * @Author: pzzz 
+ * @Date: 2017-07-27 10:47:43 
+ * @Last Modified by: pzzz
+ * @Last Modified time: 2017-07-27 10:55:42
+ */
+//获取文章列表
 var express = require('express');
 var fs = require('fs');
 var fm = require('front-matter');
@@ -5,11 +12,6 @@ var marked = require('marked');
 var ndir = require('ndir');
 var router = express.Router();
 let objtitle = [];
-
-   
-
-//更新文章title
-/* GET users listing. */
 router.get('/', function (req, res, next) {
     ndir.walk('./md/', function onDir(dirpath, files) {
         console.log(' * %s', dirpath);
@@ -23,6 +25,9 @@ router.get('/', function (req, res, next) {
             }
             if (i + 1 == l) {
                 //返回数据
+                objtitle = objtitle.sort(function(a,b){
+                    return a.id - b.id
+                })
                 res.json(objtitle);
                 objtitle = [];
             }

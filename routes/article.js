@@ -1,3 +1,10 @@
+/*
+ * @Author: pzzz 
+ * @Date: 2017-07-27 10:46:36 
+ * @Last Modified by: pzzz
+ * @Last Modified time: 2017-07-27 10:47:07
+ */
+//获取相应ID文章的接口
 var express = require('express');
 var fs = require('fs');
 var fm = require('front-matter');
